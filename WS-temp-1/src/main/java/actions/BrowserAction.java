@@ -6,6 +6,16 @@ public class BrowserAction {
 	{
 		
 	}
+	public String getText()
+	{
+		String text="Null";
+		return text;
+		
+	}
+	public void click()
+	{
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
