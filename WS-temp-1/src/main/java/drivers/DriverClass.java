@@ -72,6 +72,10 @@ public class DriverClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		DriverClass DC=new DriverClass();
+		DC.loadUrl(ConstantClass.URL);
+	//	DC.loadUrl("chrome", "https://portal.accenture.com");
 
 		final String errMsg = "Error attempting to launch web browser";
 		String osName = System.getProperty("os.name"); 
