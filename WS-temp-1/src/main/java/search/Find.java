@@ -13,7 +13,7 @@ public class Find {
 	public void FindById(String IdValue)
 	{
 	//	String id=null;
-		  String line = "id="+ "\""+IdValue+"\"";
+		  String line = "";
 		  System.out.println(line);
 		  String inputSearch = "id="+ "\""+IdValue+"\"";
 		  double count = 0,countBuffer=0,countLine=0;
@@ -62,12 +62,12 @@ public class Find {
 	System.out.println("Count : "+ count+"CountBuffer :"+countBuffer);
 	}
 	
-	public void FindByHref(String IdValue)
+	public void FindByHref(String href)
 	{
 	//	String id=null;
-		  String line = "id="+ "\""+IdValue+"\"";
+		  String line = "";
 		  System.out.println(line);
-		  String inputSearch = "id="+ "\""+IdValue+"\"";
+		  String inputSearch = "href="+ "\""+href+"\"";
 		  double count = 0,countBuffer=0,countLine=0;
 		    String lineNumber = "";
 		
@@ -121,8 +121,8 @@ public class Find {
 		  final WebClient webClient = new WebClient();
 		    final HtmlPage page = webClient.getPage("http://htmlunit.sourceforge.net");
 		    assertEquals("HtmlUnit - Welcome to HtmlUnit", page.getTitleText());*/
-			//Find f=new Find();
-			//f.FindById("main");
+			Find f=new Find();
+			f.FindByHref("http://www.bestbuy.com/site/Global-Promotions/International+Orders/pcmcat176600050000.c?id=pcmcat176600050000");
 	}
 	
 }
