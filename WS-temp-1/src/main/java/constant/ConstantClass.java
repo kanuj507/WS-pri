@@ -7,6 +7,8 @@ public class ConstantClass {
 
 	public final static String URL="https://www.google.com"; 
 	
+	public final static String FilePath="C:/Work/File.txt";
+	
 	public void chromeDriver()
 	{
 		try {
