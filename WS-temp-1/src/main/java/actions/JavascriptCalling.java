@@ -35,7 +35,7 @@ public static void main(String[] args)
     }
 
     // Can we invoke myFunction()?
-    if ( Invocable.class.isAssignableFrom(se.getClass()) ) {
+   /* if ( Invocable.class.isAssignableFrom(se.getClass()) ) {
 
         Invocable i = (Invocable) se;
         System.out.println("myFunction(2) returns: "
@@ -47,6 +47,6 @@ public static void main(String[] args)
             "Method invocation not supported!");
 
     }
-
+*/
 }
 }

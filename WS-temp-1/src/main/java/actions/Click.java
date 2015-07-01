@@ -1,27 +1,44 @@
 package actions;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 
 import javax.script.*;
 public class Click {
 
-	//public static final String MY_JS
-    //= "print(\"Hello world!\\n\");"
-    //+ "var myFunction = function(x) { return x+3; };";
-	
-	
-	public static String header ;
-	public static final String MY_JS="document.getElementById("+header+").click();";
-public void clickLink(String IdValue)
-{
-	// document.getElementById("header").click();
-}
-
 	
 	public static void main(String[] args) throws NoSuchMethodException {
+		
+		  try {
+	            ScriptEngineManager manager = new ScriptEngineManager();
+	            ScriptEngine javascriptEngine = manager.getEngineByExtension("js");
+	             
+	            // Get script from JS File
+	            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\anuj.pachauri\\Documents\\GitHub\\WS-pri\\WS-temp-1\\src\\main\\java\\actions\\Actions.js");
+	            if (fileInputStream != null) {
+	                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
+	         
+	                javascriptEngine.eval(reader);
+	                Invocable invocableEngine = (Invocable)javascriptEngine;
+	                 
+	                // Invoke javascript function named "sayHello" with parameter "Atul"
+	                Object object = invocableEngine.invokeFunction("sayHello", new String[]{"Atul"});
+	                Object object1 = invocableEngine.invokeFunction("fun1", new String[]{"ABC"});
+	           //     Object object2 = invocableEngine.invokeFunction("clickLink", new String[]{"lst-ib"});
+	                System.out.println("Result: " + object);
+	                System.out.println("Result: " + object1);
+	             //   System.out.println("Result: " + object2);
+	            }
+	        }
+	        catch (Exception ex) {
+	            ex.printStackTrace();
+	        }
+		
 		// TODO Auto-generated method stub
-		ScriptEngineManager factory = new ScriptEngineManager();
+		/*ScriptEngineManager factory = new ScriptEngineManager();
 		 // create a JavaScript engine
 		 ScriptEngine engine = factory.getEngineByName("JavaScript");
 		 // evaluate JavaScript code from String
@@ -41,7 +58,7 @@ public void clickLink(String IdValue)
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 
 	}
 	
