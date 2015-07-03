@@ -4,15 +4,36 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import javax.script.*;
+import javax.swing.text.Document;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 public class Click {
 
 	
-	public static void main(String[] args) throws NoSuchMethodException {
+	public static void main(String[] args) throws NoSuchMethodException, ParserConfigurationException, SAXException, IOException {
 		
-		  try {
+		  URL url = new URL("http://74.127.61.106/udayavaniIpad/details_android.php?home=1&catid=882&newsid=27593");
+	        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+	        DocumentBuilder db = dbf.newDocumentBuilder();
+	        Document doc = (Document) db.parse(new InputSource(url.openStream()));
+		((org.w3c.dom.Document) doc).getElementsByTagName("item").click();
+		  
+		
+		
+		
+		/*
+		
+		try {
 	            ScriptEngineManager manager = new ScriptEngineManager();
 	            ScriptEngine javascriptEngine = manager.getEngineByExtension("js");
 	             
@@ -35,7 +56,7 @@ public class Click {
 	        }
 	        catch (Exception ex) {
 	            ex.printStackTrace();
-	        }
+	        }*/
 		
 		// TODO Auto-generated method stub
 		/*ScriptEngineManager factory = new ScriptEngineManager();
