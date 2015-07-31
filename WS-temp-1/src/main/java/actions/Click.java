@@ -26,7 +26,7 @@ public class Click {
 	        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 	        DocumentBuilder db = dbf.newDocumentBuilder();
 	        Document doc = (Document) db.parse(new InputSource(url.openStream()));
-		((org.w3c.dom.Document) doc).getElementsByTagName("item").click();
+		//((org.w3c.dom.Document) doc).getElementsByTagName("item").click();
 		  
 		
 		

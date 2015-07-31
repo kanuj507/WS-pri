@@ -79,7 +79,13 @@ try {
 		}
 		
 	  public static void main(String[] args) throws Exception
-	  {	   System.out.println(get("http://www.yahoo.com"));
+	  {	  
+		  
+		  String id="48765";
+		  int id2 = Integer.parseInt(id);
+		  
+		  System.out.println(id+  "  id2 ="+id2);
+		  System.out.println(get("http://www.yahoo.com"));
 		  
 		  
 		  
@@ -100,7 +106,7 @@ try {
 			System.out.println(lockDate);
 			
 			
-			
+			/*
 		  Robot robot =new Robot();
 		  robot.setAutoDelay(40);
 		    robot.setAutoWaitForIdle(true);
@@ -133,7 +139,7 @@ try {
 		    type("Four score and seven years ago, our fathers ...");
 		 
 		    robot.delay(1000);
-		    System.exit(0);
+		    System.exit(0);*/
 	  }
 	   
 	 

@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 
 import javax.swing.JOptionPane;
 
-import constant.ConstantClass;
+//import constant.ConstantClass;
 
 public class DriverClass {
 	
@@ -70,12 +70,16 @@ public class DriverClass {
 				}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
+		Thread.sleep(5000);
+
 		DriverClass DC=new DriverClass();
-		DC.loadUrl(ConstantClass.URL);
+	//	DC.loadUrl(ConstantClass.URL);
+		DC.loadUrl("www.google.com");
 	//	DC.loadUrl("chrome", "https://portal.accenture.com");
+		
 
 		final String errMsg = "Error attempting to launch web browser";
 		String osName = System.getProperty("os.name"); 

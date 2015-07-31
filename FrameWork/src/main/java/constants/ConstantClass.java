@@ -1,6 +1,6 @@
-package iteration;
+package constants;
 
-public class Elements {
+public class ConstantClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
